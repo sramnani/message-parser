@@ -1,4 +1,6 @@
 //Program to find valid messages in a message stream
+//Program owned by Sonia Ramnani
+
 
 var lower_chars = "abcdefghij";
 var upper_chars = "MKPQ";
@@ -15,8 +17,7 @@ function mapBoolToStr(val) {
 
 }
 
-//function to validate a message
-//@param1: message stream to be validated
+//Function to validate a message
 function validateMessage(msg) {
     var messageChunk = [];
     var outputObj = {};
@@ -31,7 +32,7 @@ function validateMessage(msg) {
     return outputObj;
 }
 
-//function to parse message chunk
+//Function to parse message chunk
 function parseMessage(message) {
     var ch = '';
     if (message.length > 0) {
@@ -66,7 +67,6 @@ function parseZMessage(message) {
 }
 
 var msg = "Qa Zj MKaZcaMKaZca Khfa";
-//Call the validateMessage function to parse the message.
 var parsedObj = validateMessage(msg);
 for(var key in parsedObj){
     if (parsedObj.hasOwnProperty(key)){
